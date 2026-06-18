@@ -1,10 +1,12 @@
 const alunosMatriculados = Number(prompt("Digite a quantidade de alunos da turma."))
 
-let notaAluno = prompt("Digite a nota do aluno. Caso queria finalizar, digite 'fim' ")
-
 let notas = 0
-for(; notaAluno !== 0;) {
+for(let i = 1; i <= alunosMatriculados; i++) {
+    let notaAluno = prompt("Digite a nota do aluno.")
     notas += Number(notaAluno)
+    console.log(notas)
 }
 
-alert(`A média desta turma é ${notas.toFixed(2)}`)
+const resultado = notas / alunosMatriculados
+
+alert(`A média desta turma é ${resultado.toFixed(1)}`)
